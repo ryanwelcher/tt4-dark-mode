@@ -9,3 +9,12 @@
  * @license   https://www.gnu.org/licenses/gpl-3.0.html GPL-3.0-or-later
  * @link      https://github.com/justintadlock/tt4-dark-mode
  */
+
+// Adds an editor stylesheet.
+add_action( 'enqueue_block_editor_assets', function() {
+	wp_enqueue_style(
+		'tt4-dark-mode-editor',
+		get_theme_file_uri( 'assets/editor.css' ),
+		filemtime( get_theme_file_path( 'assets/editor.css' ) )
+	);
+} );
