@@ -14,3 +14,4 @@
 /vendor
 *.map
 .DS_Store
+build
